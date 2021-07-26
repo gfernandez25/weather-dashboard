@@ -16,43 +16,56 @@
             crossorigin="anonymous"
     />
     <!--local stylesheet-->
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/styles/style.css"/>
 
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-<header class="bg-primary text-center font-weight-bolder text-white display-4">
-    Weather Dashboard
-</header>
-<main>
-    <div class="container no-gutters">
-        <div class="row">
-            <aside class="col-12 col-md-2 col-lg-3 font-weight-bold text-black text-left">
-                <h5> Search for a city :</h5>
-                <input type="text" class="col-12 mb-3" name="submit-city">
-                <button type="button" id="button-search" class="btn btn-primary btn-md btn-block"> Search</button>
-                </br>
-                <div class="line"></div>
-                </br>
-                <button type="button" id="button-past-searches" class="btn btn-secondary btn-md btn-block">Past City Searches1 </button>
-            </aside>
-            <section class="col-12 col-md-10 col-lg-9  card" style="width: 18rem;">
-                <h5 class="card-title">City Name</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">temp</li>
-                    <li class="list-group-item">wind</li>
-                    <li class="list-group-item">humidity</li>
-                    <li class="list-group-item">UV index</li>
-                </ul>
-            </section>
-        </div>
-    </div>
+
+<main class="weather-dashboard">
+    <h1 class="weather-dashboard-header bg-primary text-center font-weight-bolder text-white display-5">
+        Weather Dashboard
+    </h1>
+
+    <aside class="search-menu font-weight-bold text-black text-left">
+        <h2 class="font-weight-bold"> Search for a city:</h2>
+        <input type="text" class="search-menu-input form-control" name="submit-city">
+        <button type="submit" class="search-menu-btn btn btn-primary btn-block"> Search</button>
+
+        <hr class="line"/>
+
+    </aside>
+
+    <section class="current-weather">
+        <h2 class="card-title font-weight-bold"></h2>
+
+        <p class="temperature">
+            Temp: <span></span>
+        </p>
+        <p class="wind">
+            Wind: <span ></span>
+        </p>
+        <p class="humidity">
+            Humidity: <span>46 %</span>
+        </p>
+        <p class="uv-index">
+            UV index:
+            <span class="badge">0.47</span>
+        </p>
+
+    </section>
+
+    <section class="forecast">
+        <h2 class="forecast-header font-weight-bold">5-Day Forecast:</h2>
+    </section>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="assets/js/script.js"></script>
+<script src="assets/scripts/openWeather.service.js"></script>
+<script src="assets/scripts/template.service.js"></script>
+<script src="assets/scripts/localStorage.service.js"></script>
+<script src="assets/scripts/main.js"></script>
 
 </body>
 </html>
