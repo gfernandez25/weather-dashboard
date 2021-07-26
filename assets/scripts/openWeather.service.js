@@ -2,7 +2,7 @@ const openWeather = {
     settings: {
         apiKey: 'fb2cbe3eb0c5579ca77d4633b6af2057',
         url: {
-            currentWeather: "http://api.openweathermap.org/data/2.5/weather",
+            currentWeather: "https://api.openweathermap.org/data/2.5/weather",
             oneCallAPI: "https://api.openweathermap.org/data/2.5/onecall"
         },
     },
